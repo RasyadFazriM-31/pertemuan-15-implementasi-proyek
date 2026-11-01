@@ -1,0 +1,13 @@
+# Data contoh fiktif nilai ulangan matematika (format: nama,nilai)
+Ayu,85
+Budi,78
+Citra,92
+Dimas,60
+Eka,74
+Fajar,75
+Gita,88
+Hana,55
+Indra,100
+Joko,68
+Kirana,81
+Lintang,70
