@@ -92,7 +92,8 @@ def tc08():
 
 def tc09():
     kode, keluaran, laporan = jalankan_main("")
-    pesan = "tidak ada data valid" if "tidak ada data valid" in keluaran else "tanpa pesan"
+    pesan = ("tidak ada data valid" if "tidak ada data valid" in keluaran.lower()
+             else "tanpa pesan")
     return f"kode {kode}, {pesan}"
 
 
