@@ -1,0 +1,9 @@
+# Data demo: berisi baris bermasalah (fiktif)
+Ayu,85
+Budi,abc
+
+Citra,105
+Dimas,60
+Eka
+Fajar,-5
+Gita,88
