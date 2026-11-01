@@ -170,4 +170,4 @@ Proyek dikerjakan perorangan, sehingga satu orang memegang beberapa peran (sesua
 
 ## 13. Repository
 
-URL repository GitHub: diisi setelah push (lihat README bagian Repositori).
+URL repository GitHub: https://github.com/RasyadFazriM-31/proyek-akhir-rekap-nilai (aktif setelah push).
