@@ -4,7 +4,7 @@ Proyek akhir mata kuliah Algoritma dan Pemrograman, S1 Pendidikan Matematika FKI
 
 ## Deskripsi
 
-Guru matematika sering harus merekap nilai ulangan secara manual. Program console berbasis Python ini membaca data nilai dari file teks, memvalidasi isinya, menghitung statistik kelas, menentukan status ketuntasan berdasarkan KKM, dan menyimpan laporan ke file. Pengguna sasaran: guru matematika.
+Guru matematika sering harus merekap nilai ulangan secara manual. Program console berbasis Python ini membaca data nilai dari file teks, memvalidasi isinya, menghitung statistik kelas, menentukan status ketuntasan berdasarkan KKM, dan menyimpan laporan ke file. Pengguna sasaran: guru matematika. Proposal dan rancangan proyek ini ada di folder terpisah `pertemuan-14-proposal-proyek`.
 
 ## Fitur
 
@@ -56,7 +56,6 @@ Kode keluar: `0` bila berhasil, `1` bila file tidak ditemukan/tidak terbaca atau
 ```
 proyek-akhir-rekap-nilai/
 |-- README.md             dokumentasi utama
-|-- proposal.md           proposal proyek (Pertemuan 14)
 |-- .gitignore
 |-- data/
 |   |-- nilai_contoh.txt        data contoh fiktif (12 siswa)

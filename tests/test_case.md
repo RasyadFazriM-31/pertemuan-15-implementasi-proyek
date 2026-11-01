@@ -1,6 +1,6 @@
 # Test Case Proyek Rekap dan Analisis Nilai
 
-Test case dirancang sebelum implementasi penuh (lihat `proposal.md` bagian 10) dan dijalankan dengan:
+Test case dirancang sebelum implementasi penuh (lihat `proposal.md` bagian 10 di folder `pertemuan-14-proposal-proyek`) dan dijalankan dengan:
 
 ```
 python3 tests/jalankan_tes.py            # tampilkan hasil
