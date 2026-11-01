@@ -66,9 +66,8 @@ def tc04():
 
 
 def tc05():
-    kode, keluaran, laporan = jalankan_main("")  # isi tidak dipakai
-    # jalankan ulang dengan path yang memang tidak ada
     tidak_ada = os.path.join(FOLDER_SEMENTARA, "tidak_ada.txt")
+    laporan = os.path.join(FOLDER_SEMENTARA, "laporan_tc05.txt")
     buffer = io.StringIO()
     with contextlib.redirect_stdout(buffer):
         kode = program.main([tidak_ada], laporan)
