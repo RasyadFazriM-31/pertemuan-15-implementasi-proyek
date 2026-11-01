@@ -2,6 +2,8 @@
 
 Penggunaan:
     python3 src/main.py [path_file_nilai]
+
+Kode keluar: 0 bila berhasil, 1 bila file bermasalah atau tidak ada data valid.
 """
 import sys
 
@@ -14,7 +16,22 @@ def main(argv=None, path_laporan=PATH_LAPORAN_DEFAULT):
     argv = sys.argv[1:] if argv is None else argv
     path = argv[0] if argv else PATH_DATA_DEFAULT
 
-    data, kesalahan = baca_data(path)
+    try:
+        data, kesalahan = baca_data(path)
+    except FileNotFoundError:
+        print(f"Kesalahan: file tidak ditemukan: {path}")
+        return 1
+    except (OSError, UnicodeDecodeError) as e:
+        print(f"Kesalahan: file tidak dapat dibaca ({type(e).__name__}): {path}")
+        return 1
+
+    for pesan in kesalahan:
+        print(f"Peringatan - {pesan}")
+
+    if not data:
+        print("Tidak ada data valid yang dapat dihitung.")
+        return 1
+
     statistik = hitung_statistik(data)
     tuntas, belum = hitung_ketuntasan(data, KKM_DEFAULT)
 
@@ -24,7 +41,11 @@ def main(argv=None, path_laporan=PATH_LAPORAN_DEFAULT):
     print(f"Maksimum    : {statistik['maksimum']:g}")
     print(f"Tuntas      : {tuntas} | Belum tuntas: {belum} (KKM {KKM_DEFAULT})")
 
-    simpan_laporan(buat_laporan(data, statistik, kesalahan), path_laporan)
+    try:
+        simpan_laporan(buat_laporan(data, statistik, kesalahan), path_laporan)
+    except OSError as e:
+        print(f"Kesalahan: laporan tidak dapat disimpan ({type(e).__name__}): {path_laporan}")
+        return 1
     print(f"Laporan disimpan di {path_laporan}")
     return 0
 

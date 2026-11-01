@@ -8,8 +8,13 @@ def validasi_nilai(nilai):
 
 
 def hitung_statistik(data):
-    """Ringkasan statistik dari list of dictionary data siswa."""
+    """Ringkasan statistik dari list of dictionary data siswa.
+
+    Bila data kosong: rata-rata 0, minimum dan maksimum None (tanpa error).
+    """
     nilai = [d["nilai"] for d in data]
+    if not nilai:
+        return {"jumlah": 0, "rata_rata": 0, "minimum": None, "maksimum": None}
     return {
         "jumlah": len(nilai),
         "rata_rata": sum(nilai) / len(nilai),
